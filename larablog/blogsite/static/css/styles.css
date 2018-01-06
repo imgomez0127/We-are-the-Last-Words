@@ -1,0 +1,140 @@
+@font-face{
+    font-family: Aidan-Script;
+    src: url(../fonts/Aidan.ttf);
+}
+@font-face{
+    font-family: HERO;
+    src: url(../fonts/Raleway-Black.ttf);
+}
+@font-face{
+    font-family: Synthesia;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face{
+    font-family:Raleway-Light;
+    src: url(../fonts/Raleway-Light.ttf);
+}
+.Aidan-Script{
+    font-family: Aidan-Script;
+}
+
+.custom-bg{
+    background-color: #e3f2fd;
+}
+.navitems{
+    font-family:HERO;
+
+}
+#nav{
+    border-bottom:5px solid #d3d3d3;
+}
+.nav-item a:hover{
+    border-bottom: 1px dotted grey;
+}
+.title{
+    font-size:2em
+}
+.post-title{
+    font-family: Hero;
+
+
+}
+.post{
+    flex-wrap:wrap;
+    width:75%;
+    border-bottom:1px solid black;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+.post-wrapper{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+}
+.post-body{
+margin-top: 5%;
+margin-bottom: 5%;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    width:100%;
+}
+.recent-post{
+    text-align:center;
+    margin-top:5%;
+    font-family:HERO;
+
+}
+.post-image{
+width:auto;
+height:auto;
+max-height:300px;
+max-width:300px;
+}
+.post-text{
+    font-family:Synthesia;
+}
+.post-text-box{
+    width:50%;
+    word-wrap: break-word;
+    margin-left:5%;
+    margin-top:2.5%
+}
+.button-read-more{
+    border:4px solid black;
+    padding:10px 10px 10px 10px;
+    background-color:white;
+    font-family:HERO;
+}
+.button-read-more:hover{
+    transition: .5s background-color;
+    transition: .5s color;
+    background-color:black;
+    color:white;
+    cursor:pointer;
+}
+.button-flexbox{
+    display:flex;
+    justify-content:flex-end;
+}
+.banner{
+    height:31.25em;
+    width:100%;
+}
+@media only screen and (max-width: 667px){
+    .banner{
+        height:20em;
+    }
+    .post:first-child{
+        margin-top:10%;
+    }
+
+    .post-title{
+        text-align:center;
+        font-family:Synthesia;
+    }
+    .post-wrapper{
+        justify-content:center
+    }
+    .title{
+        font-size:1.27em
+    }
+    .post-image{
+        max-height:300px;
+        max-width:300px;
+    }
+    .post-text{
+        word-spacing:0px;
+        text-justify:distribute;
+        font-family:Raleway-Light;
+    }
+    .post-text-box{
+        width:115%;
+    }
+    .button-flexbox{
+        justify-content:center;
+    }
+}

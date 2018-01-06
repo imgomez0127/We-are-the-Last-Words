@@ -1,0 +1,31 @@
+{% extends 'blogsite/base.html' %}
+{% load static %}
+{% block js %}
+    <script  src = "{% static 'js/last-words-index.js' %}"></script>
+{% endblock %}
+{% block body %}
+    <img src="{% static 'images/sky.jpg' %}" class="banner">
+    <h2 class="recent-post"><u>Recent Posts</u></h2>
+    <div class="post-wrapper">
+{% for post in posts %}
+        <div class="post">
+            <h2 class="post-title"> <u>{{post.title}} </u></h2>
+            {% if post.Post_Image %}
+        <div class="post-body">
+            <img src="{{post.Post_Image.url}}" class="post-image"\>
+
+                <div class="post-text-box">
+                    <h4 class="post-text">
+                        {{post.text|linebreaksbr|truncatewords:75}}
+                    </h4>
+                    <div class="button-flexbox">
+                        <button class="button-read-more" value = "{{post.pk}}">Read More</button>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        </div>
+
+{% endfor %}
+    </div>
+{% endblock %}
