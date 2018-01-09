@@ -8,7 +8,9 @@ console.log(read_more_len)
     {
 
         read_more[i].addEventListener("click", function(e){
-            console.log(e.target.value);
+            windowlocation = window.location.href
+            newlocation = windowlocation + 'all-posts/'
+            window.location.replace(newlocation)
         })
     }
 

@@ -9,11 +9,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}">
+
 
     {% block js %}{% endblock %}
+    <link type="text/css" rel="stylesheet" href="{% static 'flaticon/font/flaticon.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}">
+
 </head>
 <body>
+
 <header>
 {% block header %}
 {% endblock %}
@@ -25,9 +29,9 @@
     </button>
      <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto navitems">
-            <li class="nav-item"><a class="nav-link active" href = "{% url 'blogsite:index' %}">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href = "{% url 'blogsite:index' %}">Posts</a></li>
-            <li class="nav-item"><a class="nav-link" href = "{% url 'blogsite:index' %}">Recommended Books</a></li>
+            <li class="nav-item"><a class="nav-link flaticon-home {% block home %}{% endblock %}" href = "{% url 'blogsite:index' %}"> Home</a></li>
+            <li class="nav-item"><a class="nav-link flaticon-notebook {% block posts %}{% endblock %}" href = "{% url 'blogsite:posts' %}"> Posts</a></li>
+            <li class="nav-item"><a class="nav-link flaticon-open-book {% block books %}{% endblock %}" href = "{% url 'blogsite:index' %}"> Recommended Books</a></li>
             <li class="nav-item">
      <form class="form-inline my-2 my-lg-0" action = "#" method="get" accept-charset="utf-8" >
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q" value="{{ request.GET.q }}">

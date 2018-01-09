@@ -14,6 +14,7 @@
     font-family:Raleway-Light;
     src: url(../fonts/Raleway-Light.ttf);
 }
+
 .Aidan-Script{
     font-family: Aidan-Script;
 }
@@ -24,6 +25,9 @@
 .navitems{
     font-family:HERO;
 
+}
+.date{
+    font-family:Raleway-Light;
 }
 #nav{
     border-bottom:5px solid #d3d3d3;
@@ -36,27 +40,30 @@
 }
 .post-title{
     font-family: Hero;
-
-
 }
 .post{
     flex-wrap:wrap;
     width:75%;
     border-bottom:1px solid black;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
 
 }
+.pagination{
+
+    justify-content:center;
+}
 .post-wrapper{
-    margin-top:20px;
+    margin-top:0px;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
 
 }
 .post-body{
-margin-top: 5%;
-margin-bottom: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
@@ -64,7 +71,7 @@ margin-bottom: 5%;
 }
 .recent-post{
     text-align:center;
-    margin-top:5%;
+    margin-top:2.5%;
     font-family:HERO;
 
 }
@@ -105,6 +112,13 @@ max-width:300px;
     width:100%;
 }
 @media only screen and (max-width: 667px){
+    .recent-post{
+        margin-top:5%;
+    }
+    .post{
+        margin-top:5%;
+        margin-bottom:5%;
+    }
     .banner{
         height:20em;
     }
