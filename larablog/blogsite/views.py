@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView, ListView, DetailView
-from .models import Post
+from .models import Post, Reccommended_Book
 # Create your views here.
 
 class IndexView(TemplateView):
@@ -7,7 +7,7 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.all().order_by('-date')
+        context['posts'] = Post.objects.all().order_by('-date')[:5]
         return context
 
 class PostView(ListView):
@@ -19,3 +19,10 @@ class PostView(ListView):
 class PostDetailView(DetailView):
     template_name = 'blogsite/postview.html'
     model = Post
+    context_object_name = 'post'
+class BookView(ListView):
+    template_name = 'blogsite/books.html'
+    context_object_name = 'books'
+    paginate_by = 10
+    def get_queryset(self):
+        return Reccommended_Book.objects.all()

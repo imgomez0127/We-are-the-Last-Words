@@ -6,7 +6,9 @@
 {% endblock %}
 {% block body %}
 
-    <img src="{% static 'images/sky.jpg' %}" class="banner">
+<div class="banner" id="img2"></div>
+<div class="post-body-wrapper">
+    <div class="post-body-box">
     <h2 class="recent-post"><u>Recent Posts</u></h2>
     <div class="post-wrapper">
 {% for post in posts %}
@@ -14,7 +16,7 @@
             <h2 class="post-title"> <u>{{post.title}} </u></h2>
             {% if post.Post_Image %}
         <div class="post-body">
-            <img src="{{post.Post_Image.url}}" class="post-image"\>
+            <a class="post-image" href="{%url 'blogsite:post-view' post.pk %}"> <img src="{{post.Post_Image.url}}" class="post-image"\> </a>
 
                 <div class="post-text-box">
                    <p class="date flaticon-clock"> {{post.date}}</p>
@@ -23,13 +25,35 @@
                         {{post.text|linebreaksbr|truncatewords:75}}
                     </h4>
                     <div class="button-flexbox">
-                        <button class="button-read-more" value = "{{post.pk}}">Read More</button>
+                        <a href="{% url 'blogsite:post-view' post.pk %}"><button class="button-read-more" value = "{{post.pk}}">Read More</button></a>
                     </div>
                 </div>
             </div>
+            {% else %}
+            <div class="post-body">
+
+
+                <div class="post-text-box">
+                   <p class="date flaticon-clock"> {{post.date}}</p>
+                    <h4 class="post-text">
+
+                        {{post.text|linebreaksbr|truncatewords:75}}
+                    </h4>
+                    <div class="button-flexbox">
+                        <a href="{% url 'blogsite:post-view' post.pk %}"><button class="button-read-more" value = "{{post.pk}}">Read More</button></a>
+                    </div>
+                    </div>
+                </div>
+
         {% endif %}
         </div>
 
 {% endfor %}
+
+    </div>
+    <div class="view-all-wrapper">
+         <a href = "{% url 'blogsite:posts' %}"><button class="button-read-more" >View all Posts</button></a>
+    </div>
+</div>
     </div>
 {% endblock %}
