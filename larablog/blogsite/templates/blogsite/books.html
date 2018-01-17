@@ -1,0 +1,10 @@
+{% extends 'blogsite/base.html' %}
+{% block body %}
+<div class="book-wrapper">
+{% for book in books %}
+
+    <img src="{{book.Book_Image.url}}" class="book">
+
+{% endfor %}
+    </div>
+{% endblock %}
