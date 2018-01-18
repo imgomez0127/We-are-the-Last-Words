@@ -23,6 +23,6 @@ class PostDetailView(DetailView):
 class BookView(ListView):
     template_name = 'blogsite/books.html'
     context_object_name = 'books'
-    paginate_by = 10
+
     def get_queryset(self):
         return Reccommended_Book.objects.all()

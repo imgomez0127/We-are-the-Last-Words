@@ -1,9 +1,17 @@
 {% extends 'blogsite/base.html' %}
+{% load static %}
+{% block js %}<script  src = "{% static 'js/last-words-index.js' %}"></script>{% endblock %}
 {% block body %}
-<div class="book-wrapper">
+<div class="book-list">
 {% for book in books %}
+<div class="book-wrapper">
+    <a href="#">
+    <p class="book-overlay" value="{{book}}">{{book}}</p>
 
     <img src="{{book.Book_Image.url}}" class="book">
+        </a>
+
+</div>
 
 {% endfor %}
     </div>

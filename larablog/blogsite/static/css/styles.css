@@ -31,7 +31,9 @@ margin-bottom:5%;
 .Aidan-Script{
     font-family: Aidan-Script;
 }
-
+.Synthesia{
+    font-family:Synthesia;
+}
 .custom-bg{
     background-color: #e3f2fd;
 }
@@ -153,7 +155,7 @@ margin-bottom:5%;
 }
 .banner{
 
-    height:42em;
+    height:40em;
     width:100%;
 
 
@@ -229,19 +231,57 @@ background:url(../images/sky1.jpg);
     margin-left:-1%;
     font-family:Synthesia;
 }
-.book-wrapper{
+.book-list{
     display:flex;
     width:75%;
     margin-top:5%;
-    margin-left:12.5%;
-    justify-content:space-evenly; flex-wrap:wrap;
+    margin-left:25%;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+}
+.book-overlay{
+    font-family:Synthesia;
+    color:white;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    width:300px;
+    height:500px;
+
 }
 .book{
     width:300px;
     height:500px;
     padding: 10px 10px 10px 10px;
-    background-color:white; box-shadow: 10px 10px 100px #d3d3d3;
-    margin-bottom:2.5%;
+    margin-bottom:10%;
+
+    background-color:white;
+    box-shadow: 10px 10px 100px #d3d3d3;
+
+}
+.book-wrapper{
+    margin-right:5%;
+
+
+
+}
+.sm:hover{
+    cursor:pointer;
+
+}
+.footer{
+    background-color:white;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-top:5px solid #d3d3d3;
+}
+@media only screen and (max-width: 1200px){
+ .banner{
+        height:25em;
+    }
 }
 @media only screen and (max-width: 667px){
 .post-body-box{width:100%; box-shadow:0px 0px 0px white}
@@ -320,4 +360,13 @@ background:url(../images/sky1.jpg);
         text-align:center;
         font-family:Synthesia;
     }
+    .book{
+        margin-left:0%;
+    }
+    .book-list{
+        margin-left:12%;
+        justify-content:center;
+    }
+.book-wrapper{margin-right:0%;}
+.footer{display:none;}
 }

@@ -10,7 +10,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
-
     {% block js %}{% endblock %}
     <link type="text/css" rel="stylesheet" href="{% static 'flaticon/font/flaticon.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -31,7 +30,8 @@
         <ul class="navbar-nav mr-auto navitems">
             <li class="nav-item"><a class="nav-link flaticon-home {% block home %}{% endblock %}" href = "{% url 'blogsite:index' %}"> Home</a></li>
             <li class="nav-item"><a class="nav-link flaticon-notebook {% block posts %}{% endblock %}" href = "{% url 'blogsite:posts' %}"> Posts</a></li>
-            <li class="nav-item"><a class="nav-link flaticon-open-book {% block books %}{% endblock %}" href = "{% url 'blogsite:books' %}"> Recommended Books</a></li>
+            <li class="nav-item"><a class="nav-link flaticon-open-book {% block books %}{% endblock %}" href = "{% url 'blogsite:books' %}"> Reccommended Books &nbsp;&nbsp;&nbsp;</a></li>
+
             <li class="nav-item">
      <form class="form-inline my-2 my-lg-0" action = "#" method="get" accept-charset="utf-8" >
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q" value="{{ request.GET.q }}">
@@ -39,12 +39,15 @@
     </form>
       </li>
         </ul>
-
+    <ul class="navbar-nav ml-auto navitems">
+        <li class="nav-item"><a class="nav-link {% block about %}{% endblock %}" href = "{% url 'blogsite:books' %}"> About Me</a></li>
+    </ul>
+     </div>
 </nav>
 
 </header>
 {% block body %}
 {% endblock %}
-<footer></footer>
-</body>
+<footer class="footer"><div style="display:flex;justify-content:space-evenly;"><span class="flaticon-social-media-1 sm"></span><span class="flaticon-social-media-2 sm"></span><span class="flaticon-social-media-4 sm"></span></div></footer>
+
 </html>
