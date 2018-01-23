@@ -1,0 +1,61 @@
+{% extends 'blogsite/base.html' %}
+{% block posts %} active {% endblock %}
+{% block body %}
+<div class="post-view-body">
+<div class = "post-view-wrapper" >
+<div class="post-view-title-wrapper">
+    <h2 class="post-title"> <u>{{post.title}} </u></h2>
+</div>
+    {% if post.Post_Image %}
+            <div class="post-view" >
+               <img src="{{post.Post_Image.url}}" class="post-view-image"\>
+            </div>
+
+
+                    <div class="post-view-text-wrapper">
+                        <p class="date-post flaticon-clock"> {{post.date}}</p>
+                    </div>
+                    {% if post.Book %}
+                    <div class="date-post-wrapper">
+
+                        <p class="book-post flaticon-open-book"> <a href="{% url 'blogsite:book-view' post.Book.pk %}">{{post.Book}}</a></p>
+
+                    </div>
+    `               {% endif %}
+                    <div class="post-view-text-box">
+                    <h4 class="post-view-text"style="display:block;" >
+
+                        {{post.text|linebreaksbr}}
+                    </h4>
+                    </div>
+
+            {% else %}
+
+
+
+
+                   <div class="date-post-wrapper">
+                   <p class="date-post flaticon-clock"style="display:block;"> {{post.date}}</p>
+                    </div>
+                   <div class="post-view-text-box">
+                    <h4 class="post-view-text"style="display:block;" >
+                        {{post.text|linebreaksbr}}
+                    </h4>
+                    </div>
+
+
+        {% endif %}
+    {% if post.credits %}
+
+        <h3 class="post-view-credits" >Credits To:</h3>
+<div class="post-view-text-box">
+                    <h4 class="post-view-text" >
+
+                        {{post.text|linebreaksbr}}
+                    </h4>
+                    </div>
+
+    {% endif %}
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'blogsite/base.html' %}
+{% block home %} active {% endblock %}
+{% load static %}
+{% block js %}
+    <script  src = "{% static 'js/last-words-index.js' %}"></script>
+{% endblock %}
+{% block body %}
+
+<div class="banner" >
+    <img src="{% static 'images/sky1.jpg' %}" id="img2"\>
+    <img src="{% static 'images/pine.jpeg' %}" id="img4"\>
+    <img src="{% static 'images/tree.jpeg' %}" id="img1"\>
+    <img src="{% static 'images/flower2.jpg' %}" id="img3"\>
+    <img src="{% static 'images/flower.jpg' %}" id="img5"\>
+</div>
+<div class="post-body-wrapper">
+    <div class="post-body-box">
+    <h2 class="recent-post"><u>Recent Posts</u></h2>
+    <div class="post-wrapper">
+{% for post in posts %}
+        <div class="post">
+            <h2 class="post-title"> <u>{{post.title}} </u></h2>
+            {% if post.Post_Image %}
+        <div class="post-body">
+            <a class="post-image" href="{%url 'blogsite:post-view' post.pk %}"> <img src="{{post.Post_Image.url}}" class="post-image"\> </a>
+
+                <div class="post-text-box">
+                   <p class="date flaticon-clock"> {{post.date}}</p>
+                    <h4 class="post-text">
+
+                        {{post.text|linebreaksbr|truncatewords:75}}
+                    </h4>
+
+                </div>
+
+            </div>
+            <div class="button-flexbox">
+                        <a href="{% url 'blogsite:post-view' post.pk %}"><button class="button-read-more" value = "{{post.pk}}">Read More</button></a>
+                    </div>
+            {% else %}
+            <div class="post-body">
+
+
+                <div class="post-text-box">
+                   <p class="date flaticon-clock"> {{post.date}}</p>
+                    <h4 class="post-text">
+
+                        {{post.text|linebreaksbr|truncatewords:75}}
+                    </h4>
+
+                    </div>
+
+                </div>
+            <div class="button-flexbox">
+                        <a href="{% url 'blogsite:post-view' post.pk %}"><button class="button-read-more" value = "{{post.pk}}">Read More</button></a>
+                    </div>
+        {% endif %}
+        </div>
+
+{% endfor %}
+
+    </div>
+    <div class="view-all-wrapper">
+         <a href = "{% url 'blogsite:posts' %}"><button class="button-all-posts" >View all Posts</button></a>
+    </div>
+</div>
+    </div>
+{% endblock %}
