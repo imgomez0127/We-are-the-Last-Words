@@ -25,7 +25,7 @@ SECRET_KEY = '1pj(z@v3+2yl)o=*=7beyz^-6x0quak-z91)t1@kk_-o5gs616'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["localhost", "192.168.1.50", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost","https://the-last-words.herokuapp.com/"]
 
 
 # Application definition
@@ -121,15 +121,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 CSRF_COOKIE_SECURE = True
-X_FRAME_OPTIONS= 'DENY'
-STATIC_URL = '/static/'
+X_FRAME_OPTIONS = 'DENY'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
