@@ -9,6 +9,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "larablog.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "the-last-words.settings")
 
 application = get_wsgi_application()

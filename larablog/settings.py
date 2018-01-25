@@ -117,7 +117,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-WSGI_APPLICATION = 'larablog.wsgi.application'
+WSGI_APPLICATION = 'the-last-words.wsgi.application'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 CSRF_COOKIE_SECURE = True
