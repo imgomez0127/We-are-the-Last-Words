@@ -131,6 +131,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 5a1a5f2... remerging
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -139,6 +142,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 
 )
+<<<<<<< HEAD
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 =======
 …
@@ -152,3 +156,6 @@ django_heroku.settings(locals())
 import django_heroku
 django_heroku.settings(locals())
 >>>>>>> parent of 09c0d5e... fixed html
+=======
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+>>>>>>> parent of 5a1a5f2... remerging

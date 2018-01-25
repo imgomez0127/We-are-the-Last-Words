@@ -2,6 +2,7 @@
 {% load static %}
 {% block js %}<script  src = "{% static 'js/last-words-books.js' %}"></script>{% endblock %}
 {% block body %}
+{% if books %}
 <div class="book-list">
 {% for book in books %}
 <div class="book-wrapper">
@@ -39,6 +40,12 @@
     {% endif %}
   </ul>
     {% endif %}
-
+{% else %}
+<div class="post-body-wrapper" style="">
+    <div class="post-body-box">
+        <h2 class="recent-post">Sorry there are no books available</h2>
+    </div>
+        </div>
+{% endif %}
 
 {% endblock %}
