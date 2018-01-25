@@ -3,8 +3,10 @@ chardet==3.0.4
 dj-database-url==0.4.2
 django==1.11
 django-heroku==0.2.0
+django-production-ready==0.1.1
 django-recaptcha2==1.0.3
 flake8==3.5.0
+gunicorn==19.7.1
 idna==2.6
 mccabe==0.6.1
 pew==1.1.2
