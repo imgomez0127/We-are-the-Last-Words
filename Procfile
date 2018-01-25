@@ -1,3 +1,3 @@
-web: gunicorn --pythonpath expense_manager wsgi
+web: gunicorn --pythonpath larablog wsgi
 [requires]
 python_version = "3.6.4"
