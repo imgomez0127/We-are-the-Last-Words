@@ -25,7 +25,7 @@ SECRET_KEY = '1pj(z@v3+2yl)o=*=7beyz^-6x0quak-z91)t1@kk_-o5gs616'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://the-last-words.herokuapp.com/"]
 
 
 # Application definition
@@ -83,7 +83,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -117,7 +120,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-WSGI_APPLICATION = 'the-last-words.wsgi.application'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 CSRF_COOKIE_SECURE = True
@@ -126,10 +129,7 @@ X_FRAME_OPTIONS = 'DENY'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-DATABASES['default']['CONN_MAX_AGE'] = 500
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'

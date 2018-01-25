@@ -1,3 +1,3 @@
-web: gunicorn the-last-words.wsgi
+web: gunicorn larablog.wsgi
 [requires]
 python_version = "3.6.4"
