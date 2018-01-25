@@ -33,7 +33,7 @@
         <ul class="navbar-nav mr-auto navitems">
             <li class="nav-item"><a class="nav-link flaticon-home {% block home %}{% endblock %}" href = "{% url 'blogsite:index' %}"> Home</a></li>
             <li class="nav-item"><a class="nav-link flaticon-notebook {% block posts %}{% endblock %}" href = "{% url 'blogsite:posts' %}"> Posts</a></li>
-            <li class="nav-item"><a class="nav-link flaticon-open-book {% block books %}{% endblock %}" href = "{% url 'blogsite:books' %}"> Recommended Books &nbsp;&nbsp;&nbsp;</a></li>
+            <li class="nav-item"><a class="nav-link flaticon-open-book {% block books %}{% endblock %}" href = "{% url 'blogsite:books' %}"> Reccommended Books &nbsp;&nbsp;&nbsp;</a></li>
 
             <li class="nav-item">
      <form class="form-inline my-2 my-lg-0" action = "{% url 'blogsite:search-view' %}" method="get" accept-charset="utf-8">
