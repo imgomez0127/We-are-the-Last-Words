@@ -13,7 +13,6 @@
     <img src="{% static 'images/flower2.jpg' %}" id="img3"\>
     <img src="{% static 'images/daisy.JPG' %}" id="img5"\>
 </div>
-{% if posts %}
 <div class="post-body-wrapper">
     <div class="post-body-box">
     <h2 class="recent-post"><u>Recent Posts</u></h2>
@@ -59,18 +58,11 @@
         </div>
 
 {% endfor %}
-        </div>
+
+    </div>
     <div class="view-all-wrapper">
          <a href = "{% url 'blogsite:posts' %}"><button class="button-all-posts" >View all Posts</button></a>
     </div>
-        {% else %}
-        <div class="post-body-wrapper" style="">
-    <div class="post-body-box">
-        <h2 class="recent-post">Sorry there are no posts available</h2>
-    </div>
-        </div>
-{% endif %}
-
 </div>
     </div>
 {% endblock %}
