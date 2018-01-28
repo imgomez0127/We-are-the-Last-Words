@@ -16,8 +16,9 @@
             <h2 class="post-title"> <u>{{post.title}} </u></h2>
             {% if post.Post_Image %}
         <div class="post-body">
+            <div class="post-image-box">
             <a class="post-image" href="{% url 'blogsite:post-view' post.pk %}"><img src="{{post.Post_Image.url}}" class="post-image"\></a>
-
+            </div>
                 <div class="post-text-box">
                    <p class="date flaticon-clock"> {{post.date}}</p>
                     <h4 class="post-text">

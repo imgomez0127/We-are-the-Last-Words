@@ -16,7 +16,9 @@
 }
 body{
     background-color:#F5F5F5;
+
 }
+
 .post-body-wrapper{
 display:flex;
 justify-content:center;
@@ -70,6 +72,14 @@ min-height:600px;
 
     font-family: Hero;
 }
+.credits-title{
+    font-family: Hero;
+    text-align:center;
+}
+.credits-text{
+    font-family:Synthesia;
+    text-align:center;
+}
 .post-view-title-wrapper{
     margin-top:2.5%;
     display:flex;
@@ -112,6 +122,14 @@ min-height:600px;
     text-align:center;
     margin-top:2.5%;
     font-family:HERO;
+
+}
+.post-image-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    width:400px;
 
 }
 .post-image{
@@ -376,6 +394,7 @@ border:1px solid #d3d3d3;
     max-height:800px;
     max-width:640px;
 }
+
 }
 @media only screen and (max-width: 1200px){
  .banner{
@@ -425,6 +444,10 @@ border:1px solid #d3d3d3;
         max-height:300px;
         max-width:300px;
     }
+    .post-image-box{
+        height:300px;
+        width:300px;
+    }
     .post-view-image{
         max-height:300px;
         max-width:300px;
@@ -438,7 +461,10 @@ border:1px solid #d3d3d3;
         font-family:Raleway-Light;
     }
     .post-text-box{
+        display:flex;
+        justify-content:center;
         width:115%;
+        flex-wrap:wrap;
     }
     .button-flexbox{
         justify-content:center;
@@ -498,5 +524,10 @@ border:1px solid #d3d3d3;
     height:20em;
 
 }
-
+.credits-title{
+    font-family:Synthesia;
+}
+.credits-text{
+    font-family:Raleway-Light;
+}
 }

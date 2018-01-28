@@ -16,7 +16,7 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     date = models.DateField(default=datetime.now)
     text = models.TextField()
-    Post_Image = models.ImageField(upload_to='post_imgs/')
+    Post_Image = models.ImageField(upload_to='post_imgs/', blank=True, null=True)
     credits = models.TextField(blank=True)
 
     def __str__(self):
