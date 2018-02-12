@@ -5,7 +5,7 @@
 {% if books %}
 <div class="book-list">
 {% for book in books %}
-<div class="book-wrapper">
+<div class="book-wrapper" style="margin-bottom:12%;">
     <a href="{% url 'blogsite:book-view' book.pk %}">
     <p class="book-overlay" value="{{book}}">{{book}}</p>
 

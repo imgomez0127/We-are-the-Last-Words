@@ -6,7 +6,7 @@ class Reccommended_Book(models.Model):
     book_title= models.CharField(max_length=50)
     genre = models.CharField(max_length=50)
     author = models.CharField(max_length=50)
-    Book_Image = models.ImageField(blank=True, upload_to='post_imgs/')
+    Book_Image = models.ImageField(blank=False, upload_to='post_imgs/')
     Buy_Link = models.CharField(max_length = 2083, blank=True)
     def __str__(self):
         return self.book_title + ' by ' + self.author
