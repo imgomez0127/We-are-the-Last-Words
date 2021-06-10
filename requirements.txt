@@ -2,7 +2,7 @@ certifi==2017.11.5
 chardet==3.0.4
 colorama==0.3.9
 dj-database-url==0.4.2
-Django==1.11.23
+Django==2.2.24
 django-production-ready==0.1.1
 django-recaptcha2==1.0.3
 django-storages==1.6.5
